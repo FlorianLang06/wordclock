@@ -35,6 +35,8 @@ void Led::setup() {
   }
 
   FastLED.show();
+  yield(); 
+  FastLED.delay(4);
 }
 
 double Led::getMaxBrightnessPercnt() {
