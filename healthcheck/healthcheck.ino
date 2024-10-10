@@ -15,10 +15,14 @@ void loop() {
       int led = i;
       leds[led] = CRGB::Red; 
       FastLED.show();
+      yield();
+      FastLED.delay(4);
       delay(100);
       
       leds[led] = CRGB::Black;
       FastLED.show();
+      yield();
+      FastLED.delay(4);
       delay(100);
     }
 
@@ -28,6 +32,8 @@ void loop() {
       
     }
     FastLED.show();
+    yield();
+    FastLED.delay(4);
     delay(5000);
 
     for(int i = 0; i < NUM_LEDS; i++) {
@@ -37,4 +43,6 @@ void loop() {
     }
 
     FastLED.show();
+    yield();
+    FastLED.delay(4);
 }

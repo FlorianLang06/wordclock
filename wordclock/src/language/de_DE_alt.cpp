@@ -17,6 +17,8 @@ void Grid_de_DE_alt::setTime(int hour, int minute) {
 	}
 
 	FastLED.show();
+  yield(); 
+  FastLED.delay(4);
 	
 	return;
   }
@@ -69,6 +71,8 @@ void Grid_de_DE_alt::setTime(int hour, int minute) {
   }
 FastLED.setBrightness(Config::brightness * 255);
   FastLED.show();
+  yield(); 
+  FastLED.delay(4);
 }
 
 int Grid_de_DE_alt::time_it_is[5] = {0, 1, 3, 4, 5}; // es ist
